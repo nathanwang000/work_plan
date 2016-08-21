@@ -1,0 +1,215 @@
+#+TITLE: graduate school application
+#+DATE: <2016-08-15 Mon>
+#+AUTHOR: Jiaxuan Wang
+#+EMAIL: jiaxuan@umich
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t c:nil
+#+OPTIONS: creator:comment d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t
+#+OPTIONS: num:t p:nil pri:nil stat:t tags:t tasks:t tex:t timestamp:t toc:t
+#+OPTIONS: todo:t |:t
+#+CREATOR: Emacs 24.5.1 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
+* target schools and programs with deadline
+** [[https://www.stanford.edu/][Stanford University]]
+   no TOEFL
+   score reporting:
+   Stanford’s ETS institutional code is *4704*.
+   [[https://gradadmissions.stanford.edu/applying/starting-your-application][start application]]
+   [[https://gradadmissions.stanford.edu/about/frequently-asked-questions/transcripts-letters-recommendation-and-statement-purpose][faq]]
+   3 letters of recommendation needed
+*** [[https://cs.stanford.edu/admissions/deadlines][computer science]] PHD
+    DEADLINE: <2016-12-06 Thu>
+    [[http://cs.stanford.edu/admissions/checklist][checklist]]
+    $125 application fee
+    Statement of purpose:
+    Your Statement of Purpose should be concise, focused, and well written. It
+    should describe succinctly your reasons for applying to the proposed program
+    at Stanford, your preparation for this field of study, research interests,
+    future career plans, and other aspects of your background and interests
+    which may aid the admissions committee in evaluating your aptitude and
+    motivation for graduate study. The Statement of Purpose must be no more than
+    two pages in length, single-spaced. It will be submitted as part of the
+    online application.
+    
+** [[http://www.eecs.mit.edu/academics-admissions/graduate-program/admissions][MIT]]
+   no TOEFL
+   no GRE
+   [[http://www.eecs.mit.edu/academics-admissions/graduate-program/faqs#1][faq]]
+   3 letters of recommendation
+   The ETS code for sending TOEFL scores to MIT is 3514, and the code for the EECS
+   Department is 66 (or 78)
+   DEADLINE: <2016-12-15 Thu> SCHEDULED: <2016-10-01 Sat>
+   [[http://www.eecs.mit.edu/academics-admissions/graduate-program/admissions][start application]] 
+*** EECS PHD (no master to apply)
+    You should send these documents to our office: 
+
+    EECS Graduate Office
+    MIT, room 38-444
+    77 Massachusetts Avenue
+    Cambridge, MA 02139
+
+    Decisions are available in mid February
+    [[http://www.eecs.mit.edu/grad-areas/2-ai/][area of study]]
+
+    Admission is determined by GPA (Grade Point Average) although there is not
+    an official cut-off, letters of recommendation (we need three of them) and
+    a "Statement of Purpose" in which you write an essay detailing your
+    research interests.  A very strong background in math, physics,
+    engineering, or computer science is a necessity.  
+
+** [[http://grad.berkeley.edu/admissions/requirements/][UC Berkeley]]
+   DEADLINE: <2016-12-15 Thu>
+   GRE 4833  In addition, list the ETS code for the department to which you are
+   applying
+   At least three letters of recommendation are required
+*** [[http://grad.berkeley.edu/program/computer-science/][computer science]]
+    [[https://eecs.berkeley.edu/academics/graduate/research-programs/admissions][start application]]
+    - Statement of Purpose - Why are you applying for this program? What will you
+     do during this degree program? What do you want to do after and how will
+     this help you?
+    - Personal History Statement - What from your past made you decide to go into
+     this field? And how will your personal history help you succeed in this
+     program and your future goals?
+** [[https://www.cs.cmu.edu/doctoral-programs][CMU]]
+   DEADLINE: <2016-12-01 Sat>
+   at most 2 phd programs and any number of master!
+   TOEFL: required
+   You have the option to upload and send a copy of a previous TOEFL report, even
+   if it is more than two years old.
+   nlt master is good -- hao zhang
+   [[http://ml.cmu.edu/prospective-students/ml-phd.html][machine learning phd]]
+   [[https://applygrad.cs.cmu.edu/apply/offline.php][apply]]
+*** [[https://www.cs.cmu.edu/masters-admissions][master admission]]
+   GRE Institution Code: 2074; Department Code: 0402
+   TOEFL Institution Code: 4256; Department Code: 78
+   - Prepare a concise one or two page essay that describes your primary areas of
+   interest in research, your related experiences, and your objective in
+   pursuing a graduate degree at Carnegie Mellon. Your essay should be specific
+   in describing your interests and motivations. When describing your research
+   interests, you should explain why you think they are important areas of study
+   and why you are particularly well-suited to pursuing them. You should
+   describe any relevant education, research, commercial, government, or
+   teaching experience. If you are applying to more than one program, you may
+   (but are not required to) submit a separate Statement of Purpose for each
+   program. You must upload your Resume and Statement of Purpose in either PDF,
+   MS Word, or text format. Include your name and User ID on the essay.
+
+*** [[https://www.cs.cmu.edu/doctoral-admissions][phd admission]]
+    same as for master
+** [[http://gradschool.princeton.edu/admission/applying-princeton/statement-academic-purpose][Princeton]]
+   DEADLINE: <2016-12-15 Thu>
+   statement of purpose: less than 1000 words
+   3 recommendation letters
+   Institution Code 2672
+** [[http://gradschool.princeton.edu/academics/fields-study/computer-science][computer science phd/master]]
+* gre
+  DEADLINE: <2016-09-03 Sat>
+** what does it have? [[https://www.ets.org/gre/revised_general/scores/][GRE official site]]
+   |------------------------+--------------------------------|
+   | Verbal Reasoning       | 130–170, in 1 point increments |
+   | Quantitative Reasoning | 130–170, in 1 point increments |
+   | Analytical Writing     | 0–6, in half point increments  |
+   |------------------------+--------------------------------|
+** timesheet
+   DEADLINE: <2016-08-21 Sun>
+   
+* lisp playground
+  #+BEGIN_SRC lisp
+    (flet ((f1 (x) (1+ x))
+           (f2 (x) (1- x)))
+      (f2 (f1 10))
+      )
+    (labels ((fac (n)
+               (if (= n 1) 1
+                   (* n (fac (1- n))))
+               ))
+      (fac 11))
+  #+END_SRC
+
+  #+RESULTS:
+  : 39916800
+  
+  #+BEGIN_SRC lisp
+    ;; let's write a database that maintains school's information
+    (defvar *db* NIL)
+
+    (defun add (uname program deadline gre toefl n-statement-of-purpose n-reference-letter)
+      (push (list :uname uname :program program :deadline deadline :reqGRE gre :reqToefl toefl
+                  :n-statement-of-purpose n-statement-of-purpose :n-reference-letter n-reference-letter) *db*))
+
+    (defun dump () (dolist (school *db*) (format t "~{~a:~30t~a~%~}~%" school)))
+
+    (defun clear () (setf *db* nil))
+
+    (defun save (fn) (with-open-file (out fn
+                                      :direction :output
+                                      :if-exists :supersede)
+                       (with-standard-io-syntax (print *db* out))))
+
+    (defun load (fn) (with-open-file (in fn)
+                       (with-standard-io-syntax (setf *db* (read in)))))
+
+    (clear)
+  #+END_SRC
+
+  #+RESULTS:
+  : NIL
+
+  #+BEGIN_SRC lisp :results output
+    ;; basic facts
+    (add 'Stanford 'computer-science-phd '12-06-2016 t nil 1 3)
+    (add 'MIT 'eecs-phd '12-15-2016 nil nil 1 3)
+    (add 'UCBerkeley 'computer-science-ms-phd '12-15-2016 t nil 2 3)
+    (add 'CMU 'machine-learning-phd '12-01-2016 t t 1 3)
+    (add 'Princeton 'computer-science-phd '12-15-2016 t nil 1 3)
+    (dump)
+  #+END_SRC
+
+  #+RESULTS:
+  #+begin_example
+  UNAME:                        PRINCETON
+  PROGRAM:                      COMPUTER-SCIENCE-PHD
+  DEADLINE:                     12-15-2016
+  REQGRE:                       T
+  REQTOEFL:                     NIL
+  N-STATEMENT-OF-PURPOSE:       1
+  N-REFERENCE-LETTER:           3
+
+  UNAME:                        CMU
+  PROGRAM:                      MACHINE-LEARNING-PHD
+  DEADLINE:                     12-01-2016
+  REQGRE:                       T
+  REQTOEFL:                     T
+  N-STATEMENT-OF-PURPOSE:       1
+  N-REFERENCE-LETTER:           3
+
+  UNAME:                        UCBERKELEY
+  PROGRAM:                      COMPUTER-SCIENCE-MS-PHD
+  DEADLINE:                     12-15-2016
+  REQGRE:                       T
+  REQTOEFL:                     NIL
+  N-STATEMENT-OF-PURPOSE:       2
+  N-REFERENCE-LETTER:           3
+
+  UNAME:                        MIT
+  PROGRAM:                      EECS-PHD
+  DEADLINE:                     12-15-2016
+  REQGRE:                       NIL
+  REQTOEFL:                     NIL
+  N-STATEMENT-OF-PURPOSE:       1
+  N-REFERENCE-LETTER:           3
+
+  UNAME:                        STANFORD
+  PROGRAM:                      COMPUTER-SCIENCE-PHD
+  DEADLINE:                     12-06-2016
+  REQGRE:                       T
+  REQTOEFL:                     NIL
+  N-STATEMENT-OF-PURPOSE:       1
+  N-REFERENCE-LETTER:           3
+
+  #+end_example
+
